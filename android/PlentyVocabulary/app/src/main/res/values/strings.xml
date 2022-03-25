@@ -1,12 +1,15 @@
 <resources>
-    <string name="app_name">PlentyVocabulary</string>
+    <string name="app_name">Glossary</string>
+
+    <string name="word_per_day_tips">Words Per Day:</string>
+    <string name="word_per_day_confirm">Confirm</string>
 
     <string name="plan_10k">1~10000</string>
     <string name="plan_20k">10001~20000</string>
     <string name="plan_30k">20001~30000</string>
     <string name="plan_40k">30001~40000</string>
     <string name="plan_50k">40001~50000</string>
-    <string name="plan_52k">50001~51728</string>
+    <string name="plan_52k">50001~51727</string>
 
     <string name="plan_cur">当前计划：</string>
     <string name="switch_plan">切换计划</string>
@@ -17,4 +20,5 @@
 
     <string name="start_learn">开始学习</string>
     <string name="start_listen">单词速听</string>
+    <string name="enter_list">进入列表</string>
 </resources>

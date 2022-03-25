@@ -1,4 +1,4 @@
-package com.marcoedu.plentyvocabulary.db;
+package com.marcoedu.plentyvocabulary.data.db;
 
 public class WordTable {
     public static String NAME = "words";

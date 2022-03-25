@@ -2,161 +2,96 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="100dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/CommonWidget"
+        android:gravity="center"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="@string/plan_cur" />
-
-        <TextView
-            android:layout_width="0dp"
+            android:text="@string/word_per_day_tips" />
+        <EditText
+            android:id="@+id/et_words_per_day"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textStyle="bold"
-            android:text="@string/plan_10k"
-            android:textSize="22sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|end"
-            android:text="@string/switch_plan" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/CommonWidget"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/learn_progress" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="500/10000 "
-            android:textSize="18sp"/>
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/CommonWidget"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="@string/count_per_day" />
-
-        <TextView
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:gravity="center"
-            android:text="200"
-            android:textSize="18sp"/>
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="@dimen/margin"
-            android:layout_marginEnd="@dimen/margin"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/tv_words_per_day_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_adjust_plus"/>
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="@dimen/margin"
-            android:layout_marginEnd="@dimen/margin"
-            android:layout_gravity="center_vertical"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_adjust_minus"/>
+            android:background="@drawable/common_selector"
+            android:padding="10dp"
+            android:textColor="#0000ff"
+            android:text="@string/word_per_day_confirm" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="30dp"
+        android:background="#ccc"/>
+
+    <TextView
+        android:id="@+id/tv_plan_10k"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
         style="@style/CommonWidget"
-        android:orientation="horizontal">
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/today_count" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="200"
-                android:textStyle="bold"
-                android:textSize="30sp"/>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_weight="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/today_rest" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="120"
-                android:textStyle="bold"
-                android:textSize="30sp"/>
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        android:text="@string/plan_10k" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_plan_20k"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="40dp"
-        android:paddingEnd="40dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/round_rect_bg"
         android:gravity="center"
-        android:text="@string/start_learn"
-        android:textSize="24sp"/>
+        style="@style/CommonWidget"
+        android:text="@string/plan_20k" />
 
     <TextView
-        android:id="@+id/tv_start_listen"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_plan_30k"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="40dp"
-        android:paddingEnd="40dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/round_rect_bg"
         android:gravity="center"
-        android:text="@string/start_listen"
-        android:textSize="24sp"/>
+        style="@style/CommonWidget"
+        android:text="@string/plan_30k" />
+
+    <TextView
+        android:id="@+id/tv_plan_40k"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        style="@style/CommonWidget"
+        android:text="@string/plan_40k" />
+
+    <TextView
+        android:id="@+id/tv_plan_50k"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        style="@style/CommonWidget"
+        android:text="@string/plan_50k" />
+
+    <TextView
+        android:id="@+id/tv_plan_52k"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        style="@style/CommonWidget"
+        android:text="@string/plan_52k" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,4 +1,4 @@
-package com.marcoedu.plentyvocabulary.db;
+package com.marcoedu.plentyvocabulary.data.db;
 
 import java.io.File;
 import java.io.FileOutputStream;

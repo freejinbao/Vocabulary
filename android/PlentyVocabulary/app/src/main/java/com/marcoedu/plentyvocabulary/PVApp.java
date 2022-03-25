@@ -3,9 +3,10 @@ package com.marcoedu.plentyvocabulary;
 import android.app.Application;
 import android.content.Context;
 
-import com.marcoedu.plentyvocabulary.db.DBManager;
+import com.marcoedu.plentyvocabulary.data.db.DBManager;
+import com.marcoedu.plentyvocabulary.word.RandList;
 
-public class PlentyVocabularyApp extends Application {
+public class PVApp extends Application {
 
     private static Context sInstance;
 
@@ -22,5 +23,6 @@ public class PlentyVocabularyApp extends Application {
 
     private void initApp() {
         DBManager.instance().init(sInstance);
+        RandList.init();
     }
 }

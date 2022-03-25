@@ -16,6 +16,7 @@ public class WordBean {
     public int review;
     public int grp;
 
+
     public WordBean() {
 
     }
