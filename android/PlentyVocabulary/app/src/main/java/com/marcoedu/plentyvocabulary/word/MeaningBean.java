@@ -1,5 +1,6 @@
 package com.marcoedu.plentyvocabulary.word;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -187,6 +188,35 @@ public class MeaningBean {
         public String example;
         public List<String> synonyms;
         public List<String> antonyms;
+
+        public String partOfSpeech;
+    }
+
+    public void postOfParse() {
+        if(meanings != null) {
+            for(Mean mean : meanings) {
+                String pos = mean.partOfSpeech;
+                if(mean.definitions != null) {
+                    for(Definition def : mean.definitions) {
+                        def.partOfSpeech = pos;
+                    }
+                }
+            }
+        }
+    }
+
+    public List<Definition> getDefList() {
+        ArrayList<Definition> defList = new ArrayList<>();
+        if(meanings != null) {
+            for(Mean mean : meanings) {
+                if(mean.definitions != null) {
+                    for(Definition def : mean.definitions) {
+                        defList.add(def);
+                    }
+                }
+            }
+        }
+        return defList;
     }
 
     public static String toStr(MeaningBean[] list) {

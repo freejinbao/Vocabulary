@@ -6,9 +6,13 @@ import android.os.Looper;
 import android.speech.tts.TextToSpeech;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.gson.Gson;
 import com.marcoedu.plentyvocabulary.R;
@@ -27,8 +31,8 @@ public class WordDetailActivity extends AppCompatActivity {
     private TextToSpeech mSpeech;
     private boolean mTtsInited;
 
-    private TextView mWordView;
     private WordBean mWordBean;
+    private MeanFragment mFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +43,8 @@ public class WordDetailActivity extends AppCompatActivity {
         initTts();
         initData();
         initView();
-        initListener();
+        //initListener();
+
     }
 
     @Override
@@ -78,20 +83,11 @@ public class WordDetailActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        mWordView = findViewById(R.id.tv_word);
-        if(mWordBean != null) {
-            mWordView.setText(mWordBean.getWord());
-        }
-    }
-
-    private void initListener() {
-        mWordView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //speakWord(mWordView.getText().toString());
-                testParseJson();
-            }
-        });
+        mFragment = new MeanFragment();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.fl_fragment_root, mFragment);
+        ft.commit();
     }
 
     private void testParseJson() {

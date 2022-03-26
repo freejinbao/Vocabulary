@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="pressed">#330000ff</color>
+    <color name="color_text">@color/black</color>
 </resources>
